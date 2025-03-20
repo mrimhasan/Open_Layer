@@ -9,7 +9,7 @@ import { defaults as defaultControls } from "ol/control";
 import { Style, Stroke, Fill } from "ol/style";
 import { useEffect, useRef } from "react";
 
-const Mape = ({username}) => {
+const Mape = ({ username }) => {
   const mapRef = useRef(null);
 
   useEffect(() => {
@@ -27,8 +27,8 @@ const Mape = ({username}) => {
     const vectorLayer = new VectorLayer({
       source: vectorSource,
       style: new Style({
-        fill: new Fill({ color: "rgba(0, 150, 255, 0.4)" }), 
-        stroke: new Stroke({ color: "#0096FF", width: 2 }), 
+        fill: new Fill({ color: "rgba(0, 150, 255, 0.4)" }),
+        stroke: new Stroke({ color: "#0096FF", width: 2 }),
       }),
     });
 
@@ -37,17 +37,17 @@ const Mape = ({username}) => {
       target: mapRef.current,
       layers: [rasterLayer, vectorLayer],
       view: new View({
-        center: [0, 0], 
+        center: [0, 0],
         zoom: 2,
         projection: "EPSG:4326",
       }),
-      controls: defaultControls({ attribution: false, rotate: false }), 
+      controls: defaultControls({ attribution: false, rotate: false }),
     });
 
     // Add Polygon Drawing Interaction
     const draw = new Draw({
       source: vectorSource,
-      type: "Polygon", 
+      type: "Polygon",
     });
     map.addInteraction(draw);
 
