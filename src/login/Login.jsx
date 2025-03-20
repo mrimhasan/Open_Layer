@@ -32,11 +32,11 @@ export default function Login({setUsername}){
           <form action="" style={{height:"100%",width:"100%"}} onSubmit={formSubmit}>
             <div>
               <label htmlFor="name">Name:</label><br/>
-              <input type="text" id="name" value={input} onChange={(e)=>setInput(e.target.value)}/>
+              <input type="text" id="name" value={input} onChange={(e)=>setInput(e.target.value)} placeholder="Enter your name..."required/>
             </div>
             <div>
               <label htmlFor="mobile">Mobile Number:</label><br/>
-              <input type="tel" id="mobile" />
+              <input type="tel" id="mobile" placeholder="Enter your mobile number..." required/>
             </div>
             <button onClick={handleLogin}>Submit</button>
           </form>
