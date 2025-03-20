@@ -1,0 +1,21 @@
+
+.userName{
+    width: 100%;
+    height: 5rem;
+    padding-top: 1.5rem;
+    background-color: rgb(113, 113, 173);
+    text-align: center;
+    color: #fff;
+    font-size: large;
+   }
+   .openLayer{
+     background-color: blueviolet;
+     width: 100%;
+     height: 100%;
+   }
+   .container2{
+     
+     width: 100%;
+     height:auto;
+   }
+   
